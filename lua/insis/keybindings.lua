@@ -12,6 +12,7 @@
 local cfg = require("insis").config
 local keys = cfg.keys
 
+--test
 -- leader key
 vim.g.mapleader = keys.leader_key
 vim.g.maplocalleader = keys.leader_key
@@ -67,6 +68,8 @@ keymap("x", "K", ":move '<-2<CR>gv-gv")
 -- 在visual mode 里粘贴不要复制
 keymap("x", "p", '"_dP')
 
+-- For Clang-format keymap
+keymap("v", "<A-f>", ":'<,'>pyf /usr/local/share/clang/clang-format.py<CR>")
 --------------- super window -----------------------
 
 if cfg.s_windows ~= nil and cfg.s_windows.enable then
@@ -82,8 +85,8 @@ if cfg.s_windows ~= nil and cfg.s_windows.enable then
   keymap("n", skey.jump_right, "<C-w>l")
   keymap("n", skey.width_decrease, ":vertical resize -10<CR>")
   keymap("n", skey.width_increase, ":vertical resize +10<CR>")
-  keymap("n", skey.height_decrease, ":vertical resize -10<CR>")
-  keymap("n", skey.height_increase, ":vertical resize +10<CR>")
+  keymap("n", skey.height_decrease, ":horizontal resize -10<CR>")
+  keymap("n", skey.height_increase, ":horizontal resize +10<CR>")
   keymap("n", skey.size_equal, "<C-w>=")
 end
 
@@ -105,7 +108,6 @@ keymap("n", keys.fold.close, ":foldclose<CR>")
 
 -- Esc back to Normal mode
 keymap("t", keys.terminal_to_normal, "<C-\\><C-n>")
-
 -- DEPRECATED :Terminal kes
 
 -- map("n", "st", ":sp | terminal<CR>", opt)

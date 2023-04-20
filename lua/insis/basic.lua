@@ -4,8 +4,9 @@ vim.o.fileencoding = "utf-8"
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 -- use relative number
+--vim.wo.relativenumber = true
+vim.smartRelativeLine = true
 vim.wo.number = true
-vim.wo.relativenumber = true
 -- highlight current row /column
 vim.wo.cursorline = true
 vim.wo.cursorcolumn = false
@@ -72,7 +73,7 @@ vim.o.showtabline = 2
 -- use lualine plugin instead
 vim.o.showmode = false
 -- system clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed"
 -- disable netrw at the very start of your init.lua (strongly advised) nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
