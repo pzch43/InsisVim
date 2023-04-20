@@ -39,7 +39,7 @@
 
 local UserConfig = {
 
-  colorscheme = "tokyonight",
+  colorscheme = "onedark",
   lock_plugin_commit = true,
   max_highlight_line_count = 10000,
   enable_imselect = false,
@@ -372,7 +372,7 @@ local UserConfig = {
 
   ---@class ClangdConfig
   clangd = {
-    enable = false,
+    enable = true,
     lsp = "clangd",
     -- linter = "clangd-tidy",
     formatter = "clang-format",
@@ -398,7 +398,7 @@ local UserConfig = {
 
   ---@class RustConfig
   rust = {
-    enable = false,
+    enable = true,
     lsp = "rust_analyzer",
     -- rustup component add rustfmt
     formatter = "rustfmt",
