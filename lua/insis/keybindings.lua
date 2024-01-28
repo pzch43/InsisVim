@@ -69,6 +69,8 @@ keymap("x", "K", ":move '<-2<CR>gv-gv")
 -- 在visual mode 里粘贴不要复制
 keymap("x", "p", '"_dP')
 
+-- For Clang-format keymap
+keymap("v", "<A-f>", ":'<,'>pyf /Users/Shared/clang-format.py<CR>")
 --------------- super window -----------------------
 
 if cfg.s_windows ~= nil and cfg.s_windows.enable then
